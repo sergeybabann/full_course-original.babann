@@ -1,10 +1,11 @@
 const App = () => {
     console.log('Called')
-    let buttonText = 'Click me please'
+    let [buttonText, setButtonText] = React.useState('Click me')
+    
     const onButtonClick = () => {
-    buttonText = 'Hello from React'
-    console.log(buttonText)
-}
+        setButtonText = ('Hello from React')  
+    }
+
     return (
         <div className="app">
             <button onClick={onButtonClick}>{buttonText}</button>
